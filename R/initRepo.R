@@ -15,7 +15,7 @@
 ##' which the new repository is to be created. The default value is
 ##' \dQuote{"~/git"}.
 ##' @return The function is invoked for its side-effects and only
-##' returns \code{NULL} invisibly.
+##' returns the location of the repo invisibly.
 ##' @author Dirk Eddelbuettel
 initRepo <- function(name="drat", basepath="~/git") {
 
@@ -38,5 +38,5 @@ initRepo <- function(name="drat", basepath="~/git") {
     dir.create(file.path(dir, "src", "contrib"))
     ## create binary path as well ?
 
-    invisible(NULL)
+    invisible(dir)
 }
